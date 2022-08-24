@@ -2,7 +2,7 @@
   <div id="app">
     <AppHeader />
     <div class="content">
-      <BaseInfo imgSrc="error.png" title="ERROR" />
+      <router-view />
     </div>
     <div v-if="isSpinner">
       <div :class="spinnerBackdrop">

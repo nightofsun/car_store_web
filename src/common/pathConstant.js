@@ -1,0 +1,8 @@
+export const HOME_PATH = '/'
+export const HOME_NAME = 'home'
+export const EDIT_CAR_PATH = '/editCar'
+export const EDIT_CAR_NAME = 'editCar'
+export const ERROR_INTERNET_PATH = '/errorInternetConnection'
+export const ERROR_INTERNET_NAME = 'errorInternetConnection'
+export const SERVER_ERROR_PATH = '/serverError'
+export const SERVER_ERROR_NAME = 'serverError'
