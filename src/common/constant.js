@@ -33,7 +33,7 @@ export const GEAR_AUTO = "เกียร์ออโต้"
 export const GEAR_CVT = "เกียร์ออโต้ CVT"
 export const GEAR_SELECT = "โปรดเลือกเกียร์"
 export const gearList = [
-    {value: '', text: TYPE_SELECT},
+    {value: '', text: GEAR_SELECT},
     {value: GEAR_MANUAL, text: GEAR_MANUAL},
     {value: GEAR_AUTO, text: GEAR_AUTO},
     {value: GEAR_CVT, text: GEAR_CVT},
