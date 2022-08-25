@@ -15,7 +15,7 @@
                             </b-button>
                         </b-col>
                         <b-col cols="6">
-                            <b-button variant="info" class="button-size" @click="cancel">{{ $t('button.cancel') }}
+                            <b-button variant="secondary" class="button-size" @click="cancel">{{ $t('button.cancel') }}
                             </b-button>
                         </b-col>
                     </b-row>
