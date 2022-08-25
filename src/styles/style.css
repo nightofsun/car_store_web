@@ -51,7 +51,7 @@
     -moz-osx-font-smoothing: grayscale;
     /* text-align: center; */
     color: #2c3e50;
-    margin-top: 8vh;
+    margin-top: 70px;
     font-size: small;
 }
 .table-box {
@@ -65,7 +65,7 @@
         -moz-osx-font-smoothing: grayscale;
         /* text-align: center; */
         color: #2c3e50;
-        margin-top: 8vh;
+        margin-top: 70px;
         font-size: 10px;
     }
 

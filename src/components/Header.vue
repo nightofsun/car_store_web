@@ -33,7 +33,7 @@ export default {
 </script>
 <style scoped>
 #app-header {
-    height: 8vh;
+    height: 70px;
     font-size: medium;
 }
 </style>

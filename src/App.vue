@@ -50,7 +50,7 @@ export default {
   position: relative;
   background-color: rgba(255, 255, 255, 0.8);
   z-index: 9998;
-  height: 92vh;
+  height: calc(100%-70px);
   width: 100%;
   top: 0px;
   left: 0px;
@@ -69,7 +69,7 @@ export default {
 
 .content {
   position: absolute;
-  height: 92vh;
+  height: calc(100%-70px);
   width: 100%;
 }
 
