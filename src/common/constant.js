@@ -3,7 +3,7 @@ export const BRAND_HONDA = "HONDA"
 export const BRAND_MAZDA = "MAZDA"
 export const BRAND_TOYOTA = "TOYOTA"
 export const BRAND_MITSUBISHI = "MITSUBISHI"
-export const BRAND_NISSAN = "ISSAN"
+export const BRAND_NISSAN = "NISSAN"
 export const BRAND_BENZ = "BENZ"
 export const BRAND_SELECT = "โปรดเลือกยี่ห้อ"
 export const brandList = [
@@ -40,13 +40,13 @@ export const gearList = [
 ]
 export const SORT_TYPE_1 = "วันที่เพิ่มใหม่-เก่า"
 export const SORT_TYPE_2 = "วันที่เพิ่มเก่า-ใหม่"
-export const SORT_TYPE_3 = "ราคาน้อย-มาก"
-export const SORT_TYPE_4 = "ราคามาก-น้อย"
+export const SORT_TYPE_3 = "ราคามาก-น้อย"
+export const SORT_TYPE_4 = "ราคาน้อย-มาก"
 export const sortList = [
-    {value: '1', text: SORT_TYPE_1},
-    {value: '2', text: SORT_TYPE_2},
-    {value: '3', text: SORT_TYPE_3},
-    {value: '4', text: SORT_TYPE_4},
+    {value: '0', text: SORT_TYPE_1},
+    {value: '1', text: SORT_TYPE_2},
+    {value: '2', text: SORT_TYPE_3},
+    {value: '3', text: SORT_TYPE_4},
 ]
 export const RW_DRIVE = "ระบบขับเคลื่อนล้อหลัง"
 export const FW_DRIVE = "ระบบขับเคลื่อนล้อหน้า"

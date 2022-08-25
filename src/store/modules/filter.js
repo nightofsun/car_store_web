@@ -5,7 +5,7 @@ const state = {
     brand: "",
     minPrice: "",
     maxPrice: "",
-    sortBy: "1",
+    sortBy: "0",
     page: "1"
 }
 const getters = {

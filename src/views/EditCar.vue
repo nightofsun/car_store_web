@@ -36,7 +36,7 @@
                         <td>{{ verifyString(car.driveSystem) }}</td>
                         <td>{{ verifyString(car.gearType) }}</td>
                         <td>{{ verifyString(car.oilType) }}</td>
-                        <td>{{ verifyString(car.price) }}</td>
+                        <td>{{ verifyString(car.price).toLocaleString() }}</td>
                         <td>{{ verifyString(car.year) }}</td>
                         <td>{{ verifyString(car.engine) }}</td>
                         <td>
@@ -61,7 +61,7 @@
 </template >
                 <script>
 import { createNamespacedHelpers } from 'vuex'
-import Search from '@/components/Search.vue'
+import Search from '@/components/SearchCar.vue'
 import AppFooter from '@/components/Footer.vue';
 import { isInteger } from 'lodash'
 import ModalEditCar from '@/components/ModalEditCar.vue';

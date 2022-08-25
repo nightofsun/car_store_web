@@ -38,12 +38,21 @@
     },
     "extends": [
       "plugin:vue/essential",
+      "@vue/standard",
       "eslint:recommended"
     ],
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },
-    "rules": {}
+    "rules": {
+      "space-before-function-paren": [
+        "error", {
+          "anonymous": "ignore",
+          "named": "ignore",
+          "asyncArrow": "ignore"
+        }
+      ]
+    }
   },
   "browserslist": [
     "> 1%",

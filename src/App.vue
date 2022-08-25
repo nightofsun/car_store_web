@@ -18,8 +18,6 @@
 import { createNamespacedHelpers } from 'vuex'
 import { BSpinner } from 'bootstrap-vue'
 import AppHeader from './components/Header.vue'
-import BaseInfo from './components/BaseInfo.vue'
-import Search from './components/Search.vue'
 import { getCarList } from './services/carService'
 const { mapState: mapSpinnerState } = createNamespacedHelpers('spinner')
 const { mapActions: mapSpinnerAction } = createNamespacedHelpers('spinner')
@@ -33,9 +31,7 @@ export default {
   },
   components: {
     BSpinner,
-    AppHeader,
-    BaseInfo,
-    Search
+    AppHeader
 },
   methods: {
     ...mapSpinnerAction({

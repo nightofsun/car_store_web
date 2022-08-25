@@ -4,8 +4,7 @@
     </div>
 </template>
 <script>
-import BaseInfo from '@/components/BaseInfo.vue';
-import Search from '@/components/Search.vue';
+import BaseInfo from '@/components/BaseInfo.vue'
 export default {
     components: { BaseInfo }
 }

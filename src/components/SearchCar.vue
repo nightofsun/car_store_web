@@ -74,7 +74,7 @@ export default {
             brandSelect: '',
             typeSelect: '',
             gearSelect: '',
-            sortSelect: '1',
+            sortSelect: '0',
             brandList: brandList,
             typeList: typeList,
             gearList: gearList,
@@ -119,14 +119,14 @@ export default {
             this.brandSelect = ''
             this.typeSelect = ''
             this.gearSelect = ''
-            this.sortSelect = '1'
+            this.sortSelect = '0'
             this.setName('')
             this.setGearType('')
             this.setCarType('')
             this.setBrand('')
             this.setMinPrice('')
             this.setMaxPrice('')
-            this.setSortBy('1')
+            this.setSortBy('0')
         },
         async searchCar() {
             await this.setPage('1')
