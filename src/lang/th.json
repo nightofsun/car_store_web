@@ -50,6 +50,8 @@
     },
     "formError": {
         "intergerOnly": "ตัวเลขเท่านั้น",
+        "minPriceInvalid": "และไม่มากกว่าราคาสูงสุด",
+        "maxPriceInvalid": "และไม่น้อยกว่าราคาต่ำสุด",
         "require": "ต้องการ"
     }
 }

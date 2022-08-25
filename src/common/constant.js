@@ -80,3 +80,4 @@ export const oilList = [
     {value: OIL_6, text: OIL_6},
     {value: OIL_7, text: OIL_7},
 ]
+export const MAX_INTEGER_VALUE = "2147483648"

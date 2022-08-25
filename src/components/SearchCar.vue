@@ -32,14 +32,14 @@
                     <label class="input-label">{{ `${$t('default.price')} ${$t('default.minPrice')}` }}</label>
                     <b-form-input :placeholder="$t('default.minPrice')" @change="setMinPrice" :value="minPrice">
                     </b-form-input>
-                    <label class="input-error" v-if="!$v.minPrice.integer">{{ `* ${$t('formError.intergerOnly')}`
+                    <label class="input-error" v-if="$v.minPrice.$invalid">{{ `* ${$t('formError.intergerOnly')}${$t('formError.maxPriceInvalid')}`
                     }}</label>
                 </b-col>
                 <b-col cols="4">
                     <label class="input-label">{{ `${$t('default.price')} ${$t('default.maxPrice')}` }}</label>
                     <b-form-input :placeholder="$t('default.maxPrice')" @change="setMaxPrice" :value="maxPrice">
                     </b-form-input>
-                    <label class="input-error" v-if="!$v.maxPrice.integer">{{ `* ${$t('formError.intergerOnly')}`
+                    <label class="input-error" v-if="$v.maxPrice.$invalid">{{ `* ${$t('formError.intergerOnly')}${$t('formError.maxPriceInvalid')}`
                     }}</label>
                 </b-col>
                 <b-col cols="4">
@@ -61,9 +61,9 @@
 </template>
 <script>
 import { createNamespacedHelpers } from 'vuex'
-import { integer } from 'vuelidate/lib/validators'
+import { integer, minValue, maxValue } from 'vuelidate/lib/validators'
 import { getCarList } from '@/services/carService'
-import { brandList, typeList, gearList, sortList } from '@/common/constant'
+import { brandList, typeList, gearList, sortList, MAX_INTEGER_VALUE } from '@/common/constant'
 const { mapState: mapFilterState } = createNamespacedHelpers('filter')
 const { mapActions: mapFilterAction } = createNamespacedHelpers('filter')
 const { mapActions: mapCarAction } = createNamespacedHelpers('car')
@@ -140,9 +140,11 @@ export default {
         return {
             minPrice: {
                 integer,
+                maxValue: maxValue(this.$isEmpty(this.maxPrice)? MAX_INTEGER_VALUE: this.maxPrice)
             },
             maxPrice: {
                 integer,
+                minValue: minValue(this.$isEmpty(this.minPrice)? "0": this.minPrice)
             },
             validationGroup: ['minPrice', 'maxPrice']
         }
