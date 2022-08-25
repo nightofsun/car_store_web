@@ -17,9 +17,10 @@ export const brandList = [
     {value: BRAND_BENZ, text: BRAND_BENZ},
 ]
 export const TYPE_1 = "รถเก๋ง"
-export const TYPE_2 = "รถบรรทุก"
-export const TYPE_3 = "รถ SUV"
-export const TYPE_4 = "รถตู้"
+export const TYPE_2 = "รถกระบะ"
+export const TYPE_3 = "รถบรรทุก"
+export const TYPE_4 = "รถ SUV"
+export const TYPE_5 = "รถตู้"
 export const TYPE_SELECT = "โปรดเลือกประเภท"
 export const typeList = [
     {value: '', text: TYPE_SELECT},
@@ -27,6 +28,7 @@ export const typeList = [
     {value: TYPE_2, text: TYPE_2},
     {value: TYPE_3, text: TYPE_3},
     {value: TYPE_4, text: TYPE_4},
+    {value: TYPE_5, text: TYPE_5}
 ]
 export const GEAR_MANUAL = "เกียร์ธรรมดา"
 export const GEAR_AUTO = "เกียร์ออโต้"
