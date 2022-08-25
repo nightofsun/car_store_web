@@ -10,7 +10,7 @@ const API = axios.create({
 
 const handleResponse = res => res.data
 
-const handleErrorResponse = (err, callback) => {
+const  handleErrorResponse = (err, callback) => {
     let errorResponse = err.response
     if (errorResponse) {
         if (errorResponse.status === 408 || err.code === 'ERR_NETWORK'){
@@ -24,8 +24,8 @@ const handleErrorResponse = (err, callback) => {
             callback(errorResponse)
         }
         else {
-            alert(i18n('error.exception'))
             store.dispatch('spinner/setCloseSpinner')
+            alert(i18n.t('error.exception'))
             callback(errorResponse)
         }
     }
