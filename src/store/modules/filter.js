@@ -4,7 +4,9 @@ const state = {
     carType: "",
     brand: "",
     minPrice: "",
-    maxPrice: ""
+    maxPrice: "",
+    sortBy: "1",
+    page: "1"
 }
 const getters = {
     getName(state) {
@@ -24,6 +26,12 @@ const getters = {
     },
     getMaxPrice(state) {
         return state.maxPrice
+    },
+    getSortBy(state) {
+        return state.sortBy
+    },
+    getPage(state) {
+        return state.page
     }
 }
 const actions = {
@@ -44,6 +52,12 @@ const actions = {
     },
     setMaxPrice: ({ commit }, payload) => {
         commit('SET_MAX_PRICE', payload)
+    },
+    setSortBy: ({ commit }, payload) => {
+        commit('SET_SORT_BY', payload)
+    },
+    setPage: ({ commit }, payload) => {
+        commit('SET_PAGE', payload)
     }
 }
 const mutations = {
@@ -64,6 +78,12 @@ const mutations = {
     },
     SET_MAX_PRICE(state, payload) {
         state.maxPrice = payload
+    },
+    SET_SORT_BY(state, payload) {
+        state.sortBy = payload
+    },
+    SET_PAGE(state, payload) {
+        state.page = payload
     }
 }
 export default {

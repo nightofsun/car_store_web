@@ -5,6 +5,7 @@
 </template>
 <script>
 import BaseInfo from '@/components/BaseInfo.vue';
+import Search from '@/components/Search.vue';
 export default {
     components: { BaseInfo }
 }

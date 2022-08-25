@@ -19,6 +19,8 @@ import { createNamespacedHelpers } from 'vuex'
 import { BSpinner } from 'bootstrap-vue'
 import AppHeader from './components/Header.vue'
 import BaseInfo from './components/BaseInfo.vue'
+import Search from './components/Search.vue'
+import { getCarList } from './services/carService'
 const { mapState: mapSpinnerState } = createNamespacedHelpers('spinner')
 const { mapActions: mapSpinnerAction } = createNamespacedHelpers('spinner')
 export default {
@@ -32,27 +34,22 @@ export default {
   components: {
     BSpinner,
     AppHeader,
-    BaseInfo
+    BaseInfo,
+    Search
 },
   methods: {
     ...mapSpinnerAction({
       setOpenSpinner: 'setOpenSpinner',
       setCloseSpinner: 'setCloseSpinner'
     })
+  },
+  async mounted() {
+    await getCarList()
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* text-align: center; */
-  color: #2c3e50;
-  margin-top: 8vh;
-}
-
 .spinner-backdrop {
   position: relative;
   background-color: rgba(255, 255, 255, 0.8);

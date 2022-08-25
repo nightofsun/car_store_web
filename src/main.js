@@ -8,7 +8,7 @@ import { BootstrapVue } from 'bootstrap-vue'
 import {isEmpty, isNull, every} from 'lodash'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
-
+import '@/styles/style.css'
 Vue.config.productionTip = false
 Vue.prototype.$isEmpty = isEmpty
 Vue.prototype.$isNull = isNull

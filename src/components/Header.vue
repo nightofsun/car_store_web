@@ -1,11 +1,11 @@
 <template>
     <div>
         <b-navbar id="app-header" type="dark" variant="dark" fixed="top">
-            <b-navbar-brand>{{$t('header.appName')}}</b-navbar-brand>
+            <b-navbar-brand>{{ $t('header.appName') }}</b-navbar-brand>
             <b-collapse id="nav-collapse" is-nav>
                 <b-navbar-nav>
-                    <b-nav-item :href="homePath">{{$t('header.home')}}</b-nav-item>
-                    <b-nav-item :href="editCarPath">{{$t('header.editCar')}}</b-nav-item>
+                    <b-nav-item @click="goToHome">{{ $t('header.home') }}</b-nav-item>
+                    <b-nav-item @click="goToEdit">{{ $t('header.editCar') }}</b-nav-item>
                 </b-navbar-nav>
             </b-collapse>
         </b-navbar>
@@ -13,22 +13,27 @@
 </template>
 <script>
 import { BNavbar } from 'bootstrap-vue'
-import {EDIT_CAR_PATH, HOME_PATH} from '@/common/pathConstant'
+import router from '@/router'
+import { EDIT_CAR_PATH, HOME_PATH } from '@/common/pathConstant'
 export default {
-    data() {
-        return {
-            homePath: HOME_PATH,
-            editCarPath: EDIT_CAR_PATH
-        }
-    },
     components: {
         BNavbar
-    }
-
+    },
+    methods: {
+        async goToHome() {
+            if (router.currentRoute.path !== HOME_PATH)
+               await router.replace({ path: HOME_PATH })
+        },
+        async goToEdit() {
+            if (router.currentRoute.path !== EDIT_CAR_PATH)
+               await router.replace({ path: EDIT_CAR_PATH })
+        }
+    },
 }
 </script>
 <style scoped>
 #app-header {
     height: 8vh;
+    font-size: medium;
 }
 </style>
