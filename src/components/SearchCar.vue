@@ -115,18 +115,22 @@ export default {
             'setOpenSpinner',
             'setCloseSpinner',
         ]),
-        resetFilter() {
+        async resetFilter() {
             this.brandSelect = ''
             this.typeSelect = ''
             this.gearSelect = ''
             this.sortSelect = '0'
-            this.setName('')
-            this.setGearType('')
-            this.setCarType('')
-            this.setBrand('')
-            this.setMinPrice('')
-            this.setMaxPrice('')
-            this.setSortBy('0')
+            await this.setName('')
+            await this.setGearType('')
+            await this.setCarType('')
+            await this.setBrand('')
+            await this.setMinPrice('')
+            await this.setMaxPrice('')
+            await this.setSortBy('0')
+            await this.setPage('1')
+            await this.setOpenSpinner()
+            await getCarList()
+            await this.setCloseSpinner()
         },
         async searchCar() {
             await this.setPage('1')
